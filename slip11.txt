@@ -9,7 +9,8 @@ Ans:
 <head>
 	<title>JavaScript Example</title>
 	<style>
-		#name {
+		#name 
+		{
 			Font-size: 14px;
 			Color: black;
 		}
@@ -20,12 +21,15 @@ Ans:
 	<img id=”img” src=https://via.placeholder.com/150 onload=”changeImageSize()”>
 	
 	<script>
-		Function changeStyle() {
+		Function changeStyle() 
+		{
 			Let name = document.getElementById(“name”).value;
-			If (name) {
+			If (name)
+			{
 				Document.getElementById(“name”).style.fontSize = “18px”;
 				Document.getElementById(“name”).style.color = “red”;
-			} else {
+			} else
+			{
 				Document.getElementById(“img”).style.display = “block”;
 			}
 		}
