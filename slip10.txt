@@ -17,7 +17,8 @@ Ans:
 	<p>This is a paragraph.</p>
 	
 	<script>
-		$(document).ready(function() {
+		$(document).ready(function() 
+		{
 			$(“p”).before(“Text inserted before the paragraph. “);
 			$(“p”).after(“ Text inserted after the paragraph.”);
 		});
