@@ -6,9 +6,11 @@ Ans:
 <?php
 Session_start();
 
-If(isset($_SESSION[‘pcount])) {
+If(isset($_SESSION[‘pcount])) 
+{
   $_SESSION[‘pcount] += 1;
-} else {
+} else 
+{
   $_SESSION[‘pcount] = 1;
 }
 
