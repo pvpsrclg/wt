@@ -1,0 +1,48 @@
+Q. 1) Write a PHP script to keep track of number of times the web page has been accessed (Use Session 
+Tracking).
+
+Ans:
+
+<?php
+Session_start();
+
+If(isset($_SESSION[‘pcount])) {
+  $_SESSION[‘pcount] += 1;
+} else {
+  $_SESSION[‘pcount] = 1;
+}
+
+Echo “You have visited this page “.$_SESSION[‘pcount].” Time(s).”;
+?>
+
+Q. 2)Create ‘Position_Salaries’ Data set. Build a linear regression model by identifying independent and 
+Target variable. Split the variables into training and testing sets. Then divide the training and testing sets 
+Into a 7:3 ratio, respectively and print them. Build a simple linear regression model.
+Ans:
+
+
+Import numpy as np
+Import pandas as pd
+From sklearn.model_selection import train_test_split
+From sklearn.linear_model import LinearRegression
+
+Data = {‘Position’: [‘CEO’, ‘charman’, ‘director’, ‘Senior Manager’, ‘Junior Manager’, ‘Intern’], 
+ ‘Level’: [1, 2, 3, 4, 5, 6], 
+ ‘Salary’: [50000, 80000, 110000, 150000, 200000, 250000]}
+Df = pd.DataFrame(data)
+
+X = df.iloc[:, 1:2].values
+Y = df.iloc[:, 2].values
+# Split the variables into training and testing sets with a 7:3 ratio
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+
+Print(“X_train:\n”, X_train)
+Print(“y_train:\n”, y_train)
+Print(“X_test:\n”, X_test)
+Print(“y_test:\n”, y_test)
+
+Regressor = LinearRegression()
+Regressor.fit(X_train, y_train)
+
+Print(“Coefficients:”, regressor.coef_)
+Print(“Intercept:”, regressor.intercept_)
